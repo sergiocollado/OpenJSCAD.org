@@ -32,6 +32,20 @@ function main() {
    // donut = difference(donut,cb5);
     
     
-    return donut;
+ //   return donut;
+
+  
+ /*return  rotate_extrude( translate([6,0,0],
+ circle({r: 1, fn: 20, center: true}) ) );*/
+ 
+ // return square({size: [2,4], center: true});
+    
+ /*return rotate_extrude({fn:30}, 
+ square({size: [1,1], center: true}).translate([4,0,0]) );  */
+ 
+  //return square({size: [2,4], center: true});
+ 
+  return torus({ fni:4,fno:20,roti:45 });
+
 
 }

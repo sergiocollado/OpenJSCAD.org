@@ -44,6 +44,38 @@ function main() {
  square({size: [1,1], center: true}).translate([4,0,0]) );  */
  
   //return square({size: [2,4], center: true});
+    
+   //TORSION CIRCLE
+    /*
+    	var sqrt3 = Math.sqrt(3) / 2;
+	var radius = 8;
+
+	var hex = CSG.Polygon.createFromPoints([
+			[radius, 0, 0],
+			[radius / 2, radius * sqrt3, 0],
+			[-radius / 2, radius * sqrt3, 0],
+			[-radius, 0, 0],
+			[-radius / 2, -radius * sqrt3, 0],
+			[radius / 2, -radius * sqrt3, 0]
+	]).setColor(
+		[0, 0.35, 0.8]
+	);
+	var angle = 5;
+	return hex.solidFromSlices({
+		numslices: 720 / angle,
+		callback: function(t, slice) {
+			//var coef = 1 - t * 0.8;
+			return this.rotateZ(5 * slice).rotate(
+						[0,20,0],
+						[-1, 0, 0],
+						angle * slice
+					);
+		}
+	});
+    */
+    //-END TORSION CIRCLE
+    
+    
  
   return torus({ fni:4,fno:20,roti:45 });
 
